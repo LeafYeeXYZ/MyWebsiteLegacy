@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="light-theme">
+<head>
+
+    <!-- 以下是元数据 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 以下是CSS样式 -->
+    <link rel="stylesheet" href="css/theme.css" /><!-- 这里是主题配色 -->
+    <link rel="stylesheet" href="css/main.css" /><!-- 这里是主要样式 -->
+    <link rel="stylesheet" href="css/dynamic.css" /><!-- 这里是动态背景 -->
+    <link rel="stylesheet" href="css/react.css" /><!-- 这里是响应式布局 -->
+    <link rel="stylesheet" href="css/loading.css" /><!-- 这里是加载页面 -->
+    
+    <!-- 以下是JS -->
+    <script src="js/loading.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script defer src="js/main.js"></script>
+
+    <!-- 预加载 loading 图片 -->
+    <link rel="preload" href="img/loading.gif" as="image/gif">
+
+    <!-- 以下是访问量计数服务 -->
+    <script defer src="js/count.js" data-db=""></script>
+    
+    <!-- 以下是图标和标题 -->
+    <link rel="icon" href="assets/favicon.ico" />
+    <title>小叶子的个人小站</title>
+
+</head>
+<body style="overflow: hidden;"><!-- 这里是为了加载时不能滚动 -->
+
+    <!-- 这里是加载页面 -->
+    <dialog id="loading" open>
+        <img src="img/loading.gif">
+        <p>加载中...</p>
+    </dialog>
+
+    <!-- 这里是整个页面的容器 -->
+    <div class="container" id="page_container" style="opacity: 0;">
+
+        <!-- 让导航栏的两个按钮始终不透明 -->
+        <i id="headericonl">🏮</i>
+        <i id="headericonr">🧭</i>
+
+        <div class="header" id="header_navbar"><!-- 这里是导航栏 -->
+
+            <button id="theme-switcher"><i>🏮</i></button>
+
+            <div class="header nav">
+                <i id="gototop1">🧭</i>
+                <div class="header nav dropdown">
+                    <a href="https://www.leafyee.xyz/" id="gototop2" title=" "><i>🏠</i>首页</a>
+                    <a href="https://blog.leafyee.xyz/" title=" " target="_blank"><i>🗒️</i>博客</a>
+                    <a href="https://file.leafyee.xyz/" title=" " target="_blank"><i>📥</i>网盘</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 放在banner里文字变得很怪，不知道从哪儿继承的属性，故放在外面 -->
+        <span id="element" class="webprompt"></span>
+
+        <div class="banner"><!-- 这里是首页banner -->
+            <!-- <div class="gradient"></div> -->
+            <div class="banner cover"></div>
+            <span class="banner webtitle">小叶子的个人小站</span>
+            <botton id="bottom_mail" onclick="window.open('mailto:xiaoyezi@leafyee.xyz')">
+                <i style="font-size: 1rem;">✉️</i>
+            </botton>
+        </div>
+
+        <div class="rowcontainer"><!-- 这里是首页内容的第一个block -->
+
+            <p class="blockbanner">我的项目( ╯▽╰)</p>
+
+            <div class="rowbanner" id="block1banner">
+
+                <p class="blocksup">
+                    我的项目( ╯▽╰)
+                </p>
+                <p class="blocksub">
+                    这里是小叶子的个人小站<br>
+                    一边自学HTML/CSS/JS一边开发~
+                </p>
+
+            </div>
+
+            <div class="row">
+                
+                <div class="square">
+                    <img src="img/cover_blog.jpg">
+                    <a href="https://blog.leafyee.xyz/" title=" " target="_blank">
+                        <span class="title">小叶子的博客</span>
+                    </a>
+                    <div class="square shadow">
+                        <span class="square shadow text">笔记 / 随想 / 灵感 / 兴趣</span>
+                    </div>
+                </div>
+                
+                <div class="square">
+                    <img src="img/cover_paint.jpg">
+                    <a href="https://paint.leafyee.xyz/" title=" " target="_blank">
+                        <span class="title">赛博画师小叶子</span>
+                    </a>
+                    <div class="square shadow">
+                        <span class="square shadow text">画画好难</span>
+                    </div>
+                </div>
+                
+                <div class="square">
+                    <img src="img/cover_sas.jpg">
+                    <a href="https://github.com/LeafYeeXYZ" title=" " target="_blank">
+                        <span class="title">Github</span>
+                    </a>
+                    <div class="square shadow">
+                        <span class="square shadow text">我的一些小程序</span>
+                    </div>
+                </div>
+
+                <div class="square">
+                    <img src="img/cover_driver.jpg">
+                    <a href="https://file.leafyee.xyz/" title=" " target="_blank">
+                        <span class="title">小叶子的网盘</span>
+                    </a>
+                    <div class="square shadow">
+                        <span class="square shadow text">自用文件存储 / 公开文件分发</span>
+                    </div>
+                </div>
+
+                <div class="square">
+                    <img src="img/cover_bdi.jpg">
+                    <a href="https://www.leafyee.xyz/" title=" " target="_blank">
+                        <span class="title">⭐新版小站</span>
+                    </a>
+                    <div class="square shadow">
+                        <span class="square shadow text">基于 React 框架!</span>
+                    </div>
+                </div>
+
+                <div class="square">
+                    <img src="img/cover_test.jpg">
+                    <a>
+                        <span class="title">
+                            本站总访问量为&nbsp;<span id="SV" class="busuanzi">XXX</span>
+                        </span>
+                    </a>
+                    <div class="square shadow">
+                        <span class="square shadow text">数据自2024年1月1日起</span>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div class="rowcontainer"><!-- 这里是首页内容的第二个block -->
+
+            <p class="blockbanner">关于我|ω・）</p>
+
+            <div class="rowbanner re" id="block2banner">
+
+                <p class="blocksup">
+                    关于我|ω・）
+                </p>
+                <p class="blocksub">
+                    这里是小叶子的自我介绍<br>
+                    &nbsp;<!-- 为了保证一致性都写成两行 -->
+                </p>
+
+            </div>
+
+            <div class="row re">
+
+                <div class="square single">
+
+                    <span id="element_intro"></span>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="rowcontainer"><!-- 这里是首页内容的第三个block -->
+
+            <p class="blockbanner">留言板(๑￫ܫ￩)</p>
+
+            <div class="rowbanner" id="block3banner">
+
+                <p class="blocksup">
+                    留言板(๑￫ܫ￩)
+                </p>
+                <p class="blocksub">
+                    这里是小叶子的留言板<br>
+                    可以匿名留言（无需登录）
+                </p>
+
+            </div>
+
+            <div class="row">
+
+                <div class="square single" style="background-color: #fff;filter: brightness(var(--opacity-squarebri));">
+
+                    <iframe src="/comment.html" frameborder="0" width="100%" height="100%"></iframe>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <p class="author desktop"><!-- 这里是桌面版页脚 -->
+            &nbsp;
+            作者：<a href="https://blog.leafyee.xyz" target="_blank" title=" ">小叶子</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;|&nbsp;
+            封面：<a href="https://x.com/noeyebrow313" target="_blank" title=" ">NOEYEBROW</a>
+            &nbsp;/&nbsp;
+            <a href="https://x.com/amehakoniwa" target="_blank" title=" ">雨里</a>
+        </p>
+        <p class="author mobile"><!-- 这里是移动版页脚 -->
+            &nbsp;
+            作者：<a href="https://blog.leafyee.xyz" target="_blank" title=" ">小叶子</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved&nbsp;&nbsp;|&nbsp;
+            封面：<a href="https://x.com/noeyebrow313" target="_blank" title=" ">NOEYEBROW</a>
+            &nbsp;/&nbsp;
+            <a href="https://x.com/amehakoniwa" target="_blank" title=" ">雨里</a>
+        </p>                   
+
+    </div>
+
+</body>
+</html>

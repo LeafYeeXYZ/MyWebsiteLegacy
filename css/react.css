@@ -1,0 +1,111 @@
+/* 响应式布局 */
+@media screen and (max-width: 1300px) {
+    p.blocksub{
+        padding-top: 20%;
+    }
+    p.blocksup{
+        padding-bottom: 20%;
+    }
+    .banner.webtitle{
+        font-size: 3.2em;
+    }
+    .webprompt{
+        font-size: 1.4em;
+        top: 51vh;
+    }
+    .square {
+        width: 50%;
+    }
+    .banner span{
+        font-size: 0.85em;
+    }
+    .row{
+        width: 60%;
+        left: 40%;
+    }
+    .rowbanner {
+        display: flex;
+    }
+    p.author.desktop{
+        display: flex;
+    }
+    p.author.mobile{
+        display: none;
+    }
+    p.blockbanner{
+        display: none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .banner.webtitle{
+        font-size: 2.8em;
+    }
+    .webprompt{
+        font-size: 1.4em;
+        top: 50vh;
+    }
+    .square {
+        width: 50%;
+    }
+    .banner span{
+        font-size: 0.7em;
+    }
+    .row{
+        width: 100%;
+        left: 0;
+    }
+    .rowbanner {
+        display: none;
+    }
+    p.author.desktop{
+        display: none;
+    }
+    p.author.mobile{
+        display: flex;
+    }
+    p.blockbanner{
+        display: flex;
+    }
+}
+@media screen and (max-width: 600px) {
+    .banner.webtitle{
+        font-size: 2.6em;
+    }
+    .webprompt{
+        font-size: 1.2em;
+        top: 50vh;
+    }
+    .square {
+        width: 100%;
+    }
+    .banner span{
+        font-size: 0.7em;
+    }
+    .row{
+        width: 100%;
+        left: 0;
+    }
+    .rowbanner {
+        display: none;
+    }
+    p.author.desktop{
+        display: none;
+    }
+    p.author.mobile{
+        display: flex;
+        font-size: 0.8em;
+    }
+    p.blockbanner{
+        display: flex;
+    }
+}
+@media screen and (max-width: 500px) {
+    p.author.mobile{
+        font-size: 0.6em;
+    }
+}
+@media screen and (max-width: 400px) {
+    p.author.mobile{
+        font-size: 0.4em;
+    }
+}

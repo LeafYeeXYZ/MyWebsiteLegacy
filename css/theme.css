@@ -1,0 +1,50 @@
+/* 亮色模式 */
+.light-theme {
+    --color-back: #ffffff;--color-back-fade: rgba(255, 255, 255, 0.8);
+    --color-text: #000000;--color-text-fade: rgba(0, 0, 0, 0.8);
+    
+    --color-red1: #fa255e;--color-red103: rgba(250, 37, 94, 0.3);--color-red107: rgba(250, 37, 94, 0.7);
+    --color-red2: #f985a2;--color-red203: rgba(249, 133, 162, 0.3);--color-red207: rgba(249, 133, 162, 0.7);
+    --color-red3: #ffe1e1;--color-red303: rgba(255, 225, 225, 0.3);--color-red307: rgba(255, 225, 225, 0.7);
+    --color-blue: #b7e6ff;--color-blue03: rgba(183, 230, 255, 0.3);--color-blue07: rgba(183, 230, 255, 0.7);
+    --color-yellow: #f0ff9e;--color-yellow03: rgba(240, 255, 158, 0.3);--color-yellow07: rgba(240, 255, 158, 0.7);
+    --color-single: #fff4e0;
+
+    --color-banner1: #ffffff;
+    --color-banner2: #ffe1e1;
+    --color-banner3: #b7e6ff;
+    --color-banner4: #f0ff9e;
+    --color-banner5: #ffffff;
+
+    --color-switcher-text: #fa255e;--color-switcher-back: #ffffff;
+    --color-dropdown-text: #000000;--color-dropdown-back: #ffffff;
+    --color-dropdown-texthover: #fa255e;--color-dropdown-backhover: #ffe1e1;
+
+    --opacity-squarebri: 1;
+    --opacity-mailbri: 1;
+}
+/* 暗色模式 */
+.dark-theme {
+    --color-back: #000000;--color-back-fade: rgba(0, 0, 0, 0.8);
+    --color-text: #ffffff;--color-text-fade: rgba(255, 255, 255, 0.8);
+
+    --color-red1: #fa255e;--color-red103: rgba(250, 37, 94, 0.3);--color-red107: rgba(250, 37, 94, 0.7);
+    --color-red2: #f985a2;--color-red203: rgba(249, 133, 162, 0.3);--color-red207: rgba(249, 133, 162, 0.7);
+    --color-red3: #000000;--color-red303: rgba(0, 0, 0, 1);--color-red307: rgba(0, 0, 0, 1);
+    --color-blue: #000000;--color-blue03: rgba(0, 0, 0, 1);--color-blue07: rgba(0, 0, 0, 1);
+    --color-yellow: #000000;--color-yellow03: rgba(0, 0, 0, 1);--color-yellow07: rgba(0, 0, 0, 1);
+    --color-single: rgb(36, 24, 15);
+
+    --color-banner1: #000000;
+    --color-banner2: #480046;
+    --color-banner3: #002031;
+    --color-banner4: #272e00;
+    --color-banner5: #000000;
+
+    --color-switcher-text: #fa255e;--color-switcher-back: #000000;
+    --color-dropdown-text: #fa255e;--color-dropdown-back: #000000;
+    --color-dropdown-texthover: #fa255e;--color-dropdown-backhover: #151515;
+
+    --opacity-squarebri: 0.5;
+    --opacity-mailbri: 0.7;
+}  

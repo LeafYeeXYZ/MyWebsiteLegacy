@@ -1,0 +1,61 @@
+.gradient {
+    z-index: -1;
+/* 设置容器尺寸 - 原理1 */
+width: 100%;
+height: 100%;
+/* 背景渐变色 - 原理2 */
+/* background: linear-gradient(-45deg,
+#ffffff,
+#ffe1e1,
+#b7e6ff,
+#f0ff9e,
+#ffffff); */
+background: linear-gradient(-45deg,
+var(--color-banner1),
+var(--color-banner2),
+var(--color-banner3),
+var(--color-banner4),
+var(--color-banner5));
+/* 背景尺寸 - 原理3 */
+background-size: 500% 500%;
+/* 循环动画 - 原理4 */
+animation: gradientBG 20s ease infinite;
+
+transition: background 0.3s;
+}
+
+/* 动画，控制背景 background-position */
+@keyframes gradientBG {
+0% {
+    background-position: 0% 100%;
+}
+25% {
+    background-position: 50% 50%;
+}
+50% {
+    background-position: 100% 0%;
+}
+75% {
+    background-position: 50% 50%;
+}
+100% {
+    background-position: 0% 100%;
+}
+}
+/* 改自：https://juejin.cn/post/7040376300296470535 */
+
+.square .noneimg{
+    position: absolute;
+    width: 100%;
+    height: 14em;
+    z-index: -1;
+    box-shadow: none;
+    background: linear-gradient(-45deg,
+    #f0ff9e,
+    #ffe1e1,
+    #b7e6ff,
+    #f0ff9e);
+    background-size: 500% 500%;
+    animation: gradientBG 20s ease infinite;
+    filter: brightness(var(--opacity-squarebri));
+}
